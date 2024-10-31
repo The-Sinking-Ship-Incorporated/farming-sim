@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://beyv2dd8qq1ha"]
+
+[ext_resource type="ButtonGroup" uid="uid://dq6th8n7qqbx8" path="res://resource/button_groups/tile_button.tres" id="1_tgtuj"]
+[ext_resource type="Script" path="res://scripts/data/models/tile_button.gd" id="2_ketdt"]
+
+[node name="TileButton" type="Button"]
+custom_minimum_size = Vector2(64, 64)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme_type_variation = &"HoverButton"
+toggle_mode = true
+button_group = ExtResource("1_tgtuj")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_ketdt")

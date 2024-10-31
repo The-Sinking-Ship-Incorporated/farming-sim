@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtvsubq5074oo"]
+
+[ext_resource type="Texture2D" uid="uid://dpyfn8bea0i0" path="res://assets/textures/world/tiles/!CL_DEMO_32x32.png" id="1_8qk7f"]
+[ext_resource type="Script" path="res://scripts/data/models/food.gd" id="1_mke56"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrmc5"]
+atlas = ExtResource("1_8qk7f")
+region = Rect2(1058, 448, 32, 32)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_qrmc5")
+script = ExtResource("1_mke56")
+foodQuality = 1

@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bt0ehvmsyxsv7"]
+
+[ext_resource type="Texture2D" uid="uid://dpyfn8bea0i0" path="res://assets/textures/world/tiles/!CL_DEMO_32x32.png" id="1_nwiwk"]
+
+[resource]
+resource_local_to_scene = true
+atlas = ExtResource("1_nwiwk")
+region = Rect2(768, 430, 64, 51)

@@ -1,0 +1,190 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpu1vpp5kx7gh"]
+
+[ext_resource type="Script" path="res://scripts/ui/selection_menu.gd" id="1_x3rvx"]
+[ext_resource type="PackedScene" uid="uid://s6xn6larby3c" path="res://scenes/ui/elements/progress_display.tscn" id="2_7vbxj"]
+
+[node name="MarginContainer" type="MarginContainer"]
+custom_minimum_size = Vector2(344, 220)
+offset_right = 344.0
+offset_bottom = 220.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+script = ExtResource("1_x3rvx")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MenuCategoryViewport" type="Control" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1274.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Information" type="HBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/Information"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ItemInformationContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/Information/MenuCategoryViewport"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport2" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/Information"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ItemButtonContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/Information/MenuCategoryViewport2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport2" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport4" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer"]
+layout_mode = 2
+
+[node name="Needs" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="Hunger" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs" instance=ExtResource("2_7vbxj")]
+layout_mode = 2
+
+[node name="Label" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Hunger" index="0"]
+text = "Hunger"
+
+[node name="Sleep" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs" instance=ExtResource("2_7vbxj")]
+layout_mode = 2
+
+[node name="Label" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Sleep" index="0"]
+text = "Sleep"
+
+[node name="Recreation" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs" instance=ExtResource("2_7vbxj")]
+layout_mode = 2
+
+[node name="Label" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Recreation" index="0"]
+text = "Recreation"
+
+[node name="Moodlets" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuCategoryViewport3" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport5" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport6" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport7" type="ScrollContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer"]
+custom_minimum_size = Vector2(0, 182)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport7"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ActionButtonContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[editable path="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Hunger"]
+[editable path="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Sleep"]
+[editable path="VBoxContainer/MenuCategoryViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/HBoxContainer/Needs/Recreation"]

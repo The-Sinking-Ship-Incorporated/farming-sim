@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ntmriv8taxpf"]
+
+[ext_resource type="ButtonGroup" uid="uid://u8lpujvxw2mi" path="res://resource/button_groups/selection_item.tres" id="1_xhjqm"]
+[ext_resource type="Script" path="res://scripts/ui/selection_item_button.gd" id="2_h62tn"]
+
+[node name="SelectionItemButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+mouse_filter = 1
+theme_type_variation = &"HoverButton"
+toggle_mode = true
+button_group = ExtResource("1_xhjqm")
+script = ExtResource("2_h62tn")

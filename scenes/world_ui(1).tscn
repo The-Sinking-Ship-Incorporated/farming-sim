@@ -1,0 +1,1354 @@
+[gd_scene load_steps=81 format=3 uid="uid://d2jvwtdtlst2g"]
+
+[ext_resource type="Script" path="res://scripts/ui/debug.gd" id="1_lo164"]
+[ext_resource type="Theme" uid="uid://ci2y0fmao4l0c" path="res://resource/styles/default_theme.tres" id="1_nnuos"]
+[ext_resource type="Script" path="res://scripts/ui/menu_bar.gd" id="3_j5ken"]
+[ext_resource type="Script" path="res://scripts/ui/search_bar.gd" id="4_3f73o"]
+[ext_resource type="Texture2D" uid="uid://bnkyhjdbu3ipm" path="res://assets/textures/ui/urizen_onebit_tileset__v1d0.png" id="4_27tew"]
+[ext_resource type="Script" path="res://scripts/ui/category_button_container.gd" id="4_wceco"]
+[ext_resource type="Script" path="res://scripts/ui/menu.gd" id="5_8fgmv"]
+[ext_resource type="PackedScene" uid="uid://b5xfwnin2al8w" path="res://scenes/ui/elements/category_button.tscn" id="5_ibwaj"]
+[ext_resource type="ButtonGroup" uid="uid://dw6m6ta2m148o" path="res://resource/button_groups/architect_category.tres" id="6_jcdkt"]
+[ext_resource type="ButtonGroup" uid="uid://1c6kxjf0b14t" path="res://resource/button_groups/settings_category.tres" id="6_pd8k1"]
+[ext_resource type="ButtonGroup" uid="uid://djvdnq7dnf6vn" path="res://resource/button_groups/selection_category.tres" id="6_vwfv1"]
+[ext_resource type="PackedScene" uid="uid://bs02bs6rtekmj" path="res://scenes/ui/elements/tab_button.tscn" id="7_o2t3j"]
+[ext_resource type="ButtonGroup" uid="uid://c51qnntv02xaj" path="res://resource/button_groups/manage_category.tres" id="8_kx3or"]
+[ext_resource type="Script" path="res://scripts/ui/tile_container.gd" id="10_6p6ld"]
+[ext_resource type="Script" path="res://scripts/ui/menu_button_container.gd" id="11_3tctf"]
+[ext_resource type="ButtonGroup" uid="uid://6dc542m44wq" path="res://resource/button_groups/debug_category.tres" id="11_ck6ar"]
+[ext_resource type="Script" path="res://scripts/ui/menu_container.gd" id="12_mofra"]
+[ext_resource type="PackedScene" uid="uid://s6xn6larby3c" path="res://scenes/ui/elements/progress_display.tscn" id="16_xdlnc"]
+[ext_resource type="PackedScene" uid="uid://beyv2dd8qq1ha" path="res://scenes/ui/elements/tile_button.tscn" id="17_fqjk4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7y5f"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1080, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui1a2"]
+atlas = ExtResource("4_27tew")
+region = Rect2(690, 352, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rowtm"]
+atlas = ExtResource("4_27tew")
+region = Rect2(131, 209, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r7rp"]
+atlas = ExtResource("4_27tew")
+region = Rect2(79, 300, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by0c4"]
+atlas = ExtResource("4_27tew")
+region = Rect2(79, 612, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf1bq"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1015, 482, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5csa"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1106, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bix12"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1119, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cajrf"]
+atlas = ExtResource("4_27tew")
+region = Rect2(66, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gycwc"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1028, 1, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntub0"]
+atlas = ExtResource("4_27tew")
+region = Rect2(118, 339, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xne2r"]
+atlas = ExtResource("4_27tew")
+region = Rect2(729, 261, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uduan"]
+atlas = ExtResource("4_27tew")
+region = Rect2(170, 469, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2p8b"]
+atlas = ExtResource("4_27tew")
+region = Rect2(339, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5t6r"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1041, 508, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8yp5"]
+atlas = ExtResource("4_27tew")
+region = Rect2(105, 612, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhipx"]
+atlas = ExtResource("4_27tew")
+region = Rect2(352, 430, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgjks"]
+atlas = ExtResource("4_27tew")
+region = Rect2(365, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrsup"]
+atlas = ExtResource("4_27tew")
+region = Rect2(495, 443, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bp2u"]
+atlas = ExtResource("4_27tew")
+region = Rect2(703, 313, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nchra"]
+atlas = ExtResource("4_27tew")
+region = Rect2(937, 326, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meoqb"]
+atlas = ExtResource("4_27tew")
+region = Rect2(755, 118, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cge7i"]
+atlas = ExtResource("4_27tew")
+region = Rect2(417, 469, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2nab"]
+atlas = ExtResource("4_27tew")
+region = Rect2(885, 378, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shyjo"]
+atlas = ExtResource("4_27tew")
+region = Rect2(677, 339, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1slo"]
+atlas = ExtResource("4_27tew")
+region = Rect2(794, 339, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh3oe"]
+atlas = ExtResource("4_27tew")
+region = Rect2(742, 248, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wlxj"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1301, 599, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4fsw"]
+atlas = ExtResource("4_27tew")
+region = Rect2(1015, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hp5y"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(885, 378, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bm8l"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(755, 352, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwetu"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(66, 482, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euesr"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(794, 326, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe0x5"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(547, 430, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr0tb"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(716, 66, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twr1f"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(53, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqxqm"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(794, 326, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nct77"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1119, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpuq7"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1132, 495, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a81l1"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(14, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwug0"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(378, 365, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvyhy"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(79, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr8s5"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(430, 378, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkthy"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(183, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd0mr"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(105, 404, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72kek"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1028, 1, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb782"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1041, 1, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6kjy"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1, 40, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jxit"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(677, 1, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx52s"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1, 547, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0605"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(742, 261, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8eo8"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(729, 261, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7if8e"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1, 469, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k5f1"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(170, 469, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3rle"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(339, 287, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpkxo"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(365, 456, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vbx"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(391, 456, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as5xc"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(1249, 326, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp3vv"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(183, 300, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adtps"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(105, 612, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqku7"]
+resource_local_to_scene = true
+atlas = ExtResource("4_27tew")
+region = Rect2(963, 287, 12, 12)
+
+[node name="CanvasUI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nnuos")
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Control"]
+layout_mode = 2
+offset_right = 21.0
+offset_bottom = 56.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Control/PanelContainer/MarginContainer"]
+layout_mode = 2
+script = ExtResource("1_lo164")
+
+[node name="TileData" type="Control" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -530.0
+offset_bottom = -530.0
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="Notifications" type="Control" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -950.0
+offset_top = -530.0
+offset_right = -950.0
+offset_bottom = -530.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="Pawns" type="Control" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 1
+
+[node name="MenuBar" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0.498039)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -28.0
+offset_right = 263.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"RoundTopPanelContainer"
+script = ExtResource("3_j5ken")
+trayCloseTime = 2.0
+menuOpenDuration = 0.4
+menuOpenTrans = 2
+menuOpenEase = 0
+menuCloseDuration = 0.4
+menuCloseTrans = 5
+menuCloseEase = 1
+menuFadeInDuration = 0.2
+menuFadeInTrans = 1
+menuFadeInEase = 0
+menuFadeOutDuration = 0.4
+menuFadeOutTrans = 1
+menuFadeOutEase = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBar"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Categories" type="MarginContainer" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_bottom = 28
+
+[node name="CategoryViewport" type="Control" parent="MenuBar/HBoxContainer/Categories"]
+clip_contents = true
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_wceco")
+selectionDuration = 0.5
+swapDuration = 0.5
+
+[node name="SelectionPanel" type="Panel" parent="MenuBar/HBoxContainer/Categories/CategoryViewport"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+mouse_filter = 1
+theme_type_variation = &"SelectionPanelLeft"
+
+[node name="CategoryButtonContainers" type="HBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport"]
+layout_mode = 1
+offset_left = -24.0
+offset_right = 96.0
+offset_bottom = 192.0
+theme_override_constants/separation = 0
+
+[node name="SelectionCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="CategoryButton7" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Overview"
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_o7y5f")
+
+[node name="CategoryButton" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Information"
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_ui1a2")
+
+[node name="CategoryButton2" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Bio"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_rowtm")
+
+[node name="CategoryButton5" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Needs"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_3r7rp")
+
+[node name="CategoryButton3" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Gear"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_by0c4")
+
+[node name="CategoryButton4" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Health"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_hf1bq")
+
+[node name="CategoryButton6" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Social"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_n5csa")
+
+[node name="CategoryButton8" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SelectionCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Log/Exchange"
+disabled = true
+button_group = ExtResource("6_vwfv1")
+icon = SubResource("AtlasTexture_bix12")
+
+[node name="ArchitectCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="CategoryButton" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Orders - mine, chop, harvest and gather resources"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_cajrf")
+
+[node name="CategoryButton2" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Zones - stockpiles, sowing, animal, common/living areas"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_gycwc")
+
+[node name="CategoryButton3" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Shelter - walls, doors, windows, floors and fire"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_ntub0")
+
+[node name="CategoryButton4" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Production - crafting stations"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_xne2r")
+
+[node name="CategoryButton5" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Furniture - beds, chairs, tables, etc"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_uduan")
+
+[node name="CategoryButton6" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Defense - barricades, trenches, foxholes, traps"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_c2p8b")
+
+[node name="CategoryButton7" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Power - generators, batteries, cables"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_x5t6r")
+
+[node name="CategoryButton8" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ArchitectCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Decoration"
+button_group = ExtResource("6_jcdkt")
+icon = SubResource("AtlasTexture_l8yp5")
+
+[node name="ManageCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="CategoryButton" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Tasks"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_vhipx")
+
+[node name="CategoryButton2" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Work"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_sgjks")
+
+[node name="CategoryButton3" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Areas - assign allowed areas"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_xrsup")
+
+[node name="CategoryButton4" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Schedule"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_1bp2u")
+
+[node name="CategoryButton5" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Apparel"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_nchra")
+
+[node name="CategoryButton6" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Medicine"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_meoqb")
+
+[node name="CategoryButton7" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/ManageCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Roles"
+button_group = ExtResource("8_kx3or")
+icon = SubResource("AtlasTexture_cge7i")
+
+[node name="SettingsCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="CategoryButton" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Controls"
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_w2nab")
+
+[node name="CategoryButton2" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Video"
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_shyjo")
+
+[node name="CategoryButton3" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_n1slo")
+
+[node name="CategoryButton4" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Save/Load"
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_vh3oe")
+
+[node name="CategoryButton5" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Help"
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_6wlxj")
+
+[node name="CategoryButton6" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/SettingsCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+tooltip_text = "Exit"
+button_group = ExtResource("6_pd8k1")
+icon = SubResource("AtlasTexture_v4fsw")
+
+[node name="DebugCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="CategoryButton" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/DebugCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+button_group = ExtResource("11_ck6ar")
+
+[node name="CategoryButton2" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/DebugCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+button_group = ExtResource("11_ck6ar")
+
+[node name="CategoryButton3" parent="MenuBar/HBoxContainer/Categories/CategoryViewport/CategoryButtonContainers/DebugCategoryContainer" instance=ExtResource("5_ibwaj")]
+layout_mode = 2
+button_group = ExtResource("11_ck6ar")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="MenuButtons" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("11_3tctf")
+selectionDuration = 0.5
+selectionFadeInDuration = 0.2
+selectionFadeInTrans = 1
+selectionFadeInEase = 0
+selectionFadeOutDuration = 0.4
+selectionFadeOutTrans = 1
+selectionFadeOutEase = 1
+
+[node name="Anchor" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 1
+
+[node name="SelectionPanel" type="Panel" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/Anchor"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 31.0
+mouse_filter = 1
+theme_type_variation = &"SelectionPanelBottom"
+
+[node name="MenuButtonContainer" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="SelectMenuButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("7_o2t3j")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleButton"
+disabled = true
+text = "Selection"
+icon = SubResource("AtlasTexture_1hp5y")
+
+[node name="ArchitectMenuButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("7_o2t3j")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleButton"
+text = "Architect"
+icon = SubResource("AtlasTexture_2bm8l")
+
+[node name="ManageMenuButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("7_o2t3j")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleButton"
+text = "Manage"
+icon = SubResource("AtlasTexture_iwetu")
+
+[node name="SettingsMenuButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("7_o2t3j")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleButton"
+text = "Settings"
+icon = SubResource("AtlasTexture_euesr")
+
+[node name="DevMenuButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("7_o2t3j")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TitleButton"
+text = "Debug"
+icon = SubResource("AtlasTexture_qe0x5")
+
+[node name="MenuViewport" type="Panel" parent="MenuBar/HBoxContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(344, 220)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_type_variation = &"PanelSquare"
+script = ExtResource("12_mofra")
+menuSwapDuration = 0.5
+categorySwapDuration = 0.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport"]
+custom_minimum_size = Vector2(2505, 0)
+layout_mode = 0
+offset_left = -501.0
+offset_right = 2004.0
+offset_bottom = 220.0
+
+[node name="MenuContainer" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="SelectionMenuViewport" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("5_8fgmv")
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport"]
+custom_minimum_size = Vector2(0, 1760)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1536.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport2" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport3" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport4" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Hunger" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer" instance=ExtResource("16_xdlnc")]
+layout_mode = 2
+
+[node name="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Hunger" index="0"]
+text = "Hunger"
+
+[node name="Sleep" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer" instance=ExtResource("16_xdlnc")]
+layout_mode = 2
+
+[node name="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Sleep" index="0"]
+text = "Sleep"
+
+[node name="Recreation" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer" instance=ExtResource("16_xdlnc")]
+layout_mode = 2
+
+[node name="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Recreation" index="0"]
+text = "Recreation"
+
+[node name="MenuCategoryViewport5" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport6" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport7" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport7"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuCategoryViewport8" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport8"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ArchitectMenuViewport" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("5_8fgmv")
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1760.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton14" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_lr0tb")
+category = 1
+
+[node name="TileButton15" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+tooltip_text = "Disassemble/Deconstruct"
+icon = SubResource("AtlasTexture_twr1f")
+category = 1
+
+[node name="TileButton17" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+tooltip_text = "Uninstall"
+icon = SubResource("AtlasTexture_pqxqm")
+category = 1
+
+[node name="TileButton21" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_nct77")
+category = 1
+
+[node name="TileButton16" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_xpuq7")
+category = 1
+
+[node name="TileButton" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_a81l1")
+category = 1
+
+[node name="TileButton2" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_gwug0")
+category = 1
+
+[node name="TileButton3" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_lvyhy")
+category = 1
+
+[node name="TileButton19" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_rr8s5")
+category = 1
+
+[node name="TileButton18" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_dkthy")
+category = 1
+
+[node name="TileButton4" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_fd0mr")
+category = 1
+
+[node name="MenuCategoryViewport2" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport2"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton9" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport2/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_72kek")
+category = 6
+
+[node name="TileButton10" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport2/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_vb782")
+category = 6
+
+[node name="MenuCategoryViewport3" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton5" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_e6kjy")
+category = 3
+
+[node name="TileButton6" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_3jxit")
+category = 3
+
+[node name="TileButton13" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_vx52s")
+category = 3
+
+[node name="MenuCategoryViewport4" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport4"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton7" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_w0605")
+category = 5
+
+[node name="TileButton8" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_y8eo8")
+category = 5
+
+[node name="MenuCategoryViewport5" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport5"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton9" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport5/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_7if8e")
+category = 6
+
+[node name="TileButton10" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport5/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_1k5f1")
+category = 6
+
+[node name="MenuCategoryViewport6" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton9" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_k3rle")
+category = 6
+
+[node name="TileButton11" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_kpkxo")
+category = 6
+
+[node name="TileButton10" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_f7vbx")
+category = 6
+
+[node name="MenuCategoryViewport7" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport7"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton9" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport7/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_as5xc")
+category = 6
+
+[node name="MenuCategoryViewport8" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TileContainer" type="GridContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport8"]
+custom_minimum_size = Vector2(384, 192)
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 6
+script = ExtResource("10_6p6ld")
+
+[node name="TileButton11" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport8/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_lp3vv")
+category = 9
+
+[node name="TileButton12" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport8/TileContainer" instance=ExtResource("17_fqjk4")]
+layout_mode = 2
+icon = SubResource("AtlasTexture_adtps")
+category = 9
+
+[node name="ManageMenuViewport" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("5_8fgmv")
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ManageMenuViewport"]
+custom_minimum_size = Vector2(0, 1536)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1536.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ManageMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ManageMenuViewport/MenuCategoryContainer/MenuCategoryViewport"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsMenuViewport" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("5_8fgmv")
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport"]
+custom_minimum_size = Vector2(0, 1536)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1536.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Option" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option2" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option3" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Option4" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SettingsMenuViewport/MenuCategoryContainer/MenuCategoryViewport/CategoryOptionsContainer/Option4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DebugMenuViewport" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+script = ExtResource("5_8fgmv")
+
+[node name="MenuCategoryContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/DebugMenuViewport"]
+custom_minimum_size = Vector2(0, 1536)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1536.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MenuCategoryViewport" type="ScrollContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/DebugMenuViewport/MenuCategoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="CategoryOptionsContainer" type="VBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/DebugMenuViewport/MenuCategoryContainer/MenuCategoryViewport"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuActions" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer"]
+custom_minimum_size = Vector2(2505, 28)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions/HBoxContainer"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+tooltip_text = "Draft"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_lqku7")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions/HBoxContainer"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+tooltip_text = "Draft"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_lqku7")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions/HBoxContainer"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+tooltip_text = "Draft"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_lqku7")
+expand_icon = true
+
+[node name="Button4" type="Button" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions/HBoxContainer"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+tooltip_text = "Draft"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_lqku7")
+expand_icon = true
+
+[node name="SearchBar" type="LineEdit" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_type_variation = &"LineEditSquare"
+placeholder_text = "click to search..."
+alignment = 1
+flat = true
+script = ExtResource("4_3f73o")
+
+[node name="Placeholder" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Placeholder2" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="Placeholder3" type="Control" parent="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[editable path="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Hunger"]
+[editable path="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Sleep"]
+[editable path="MenuBar/HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/SelectionMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/MarginContainer/VBoxContainer/Recreation"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcatwxme7lhcy"]
+
+[ext_resource type="PackedScene" uid="uid://d2jvwtdtlst2g" path="res://scenes/world_ui(1).tscn" id="1_7uncc"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_lnbpr"]
+[ext_resource type="PackedScene" uid="uid://bhx8hjr0hftqw" path="res://scenes/world.tscn" id="2_18t8c"]
+[ext_resource type="PackedScene" uid="uid://b1b58a67eml2m" path="res://scenes/world_ui.tscn" id="2_mt4hu"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_lnbpr")
+
+[node name="World" parent="." instance=ExtResource("2_18t8c")]
+
+[node name="WorldUI" parent="." instance=ExtResource("2_mt4hu")]
+
+[node name="CanvasUI" parent="." instance=ExtResource("1_7uncc")]

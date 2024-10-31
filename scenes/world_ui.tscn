@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1b58a67eml2m"]
+
+[ext_resource type="Script" path="res://scripts/ui/world_ui.gd" id="1_gq36k"]
+[ext_resource type="Script" path="res://scripts/world/selection_manager.gd" id="2_rccd1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrv3o"]
+size = Vector2(0, 0)
+
+[node name="WorldUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gq36k")
+
+[node name="SelectionManager" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_rccd1")
+
+[node name="SelectionRect" type="ReferenceRect" parent="SelectionManager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(1, 1, 1, 0.8)
+editor_only = false
+
+[node name="Area2D" type="Area2D" parent="SelectionManager"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectionManager/Area2D"]
+shape = SubResource("RectangleShape2D_hrv3o")
+debug_color = Color(1, 1, 1, 0)

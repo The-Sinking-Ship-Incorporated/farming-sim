@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://domm2hjptsk3d"]
+
+[ext_resource type="Script" path="res://scripts/world/selection_area.gd" id="1_v1b0p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2b80"]
+size = Vector2(10, 10)
+
+[node name="SelectionArea" type="Area2D"]
+show_behind_parent = true
+monitoring = false
+script = ExtResource("1_v1b0p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b2b80")
+debug_color = Color(0.596078, 1, 0.490196, 0.419608)
+
+[node name="SelectionRect" type="ReferenceRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(10, 10)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(1, 1, 1, 0.8)
+border_width = 2.0
+editor_only = false

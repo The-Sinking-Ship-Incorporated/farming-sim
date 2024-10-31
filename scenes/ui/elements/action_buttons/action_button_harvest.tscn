@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1y6j1cph7x0l"]
+
+[ext_resource type="Texture2D" uid="uid://bnkyhjdbu3ipm" path="res://assets/textures/ui/urizen_onebit_tileset__v1d0.png" id="1_1pn6r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7siw"]
+resource_local_to_scene = true
+atlas = ExtResource("1_1pn6r")
+region = Rect2(79, 404, 12, 12)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(28, 28)
+tooltip_text = "Harvest"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_m7siw")
+expand_icon = true

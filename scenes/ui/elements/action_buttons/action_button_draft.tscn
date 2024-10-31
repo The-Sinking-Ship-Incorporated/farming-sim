@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://beab4pt8rubfp"]
+
+[ext_resource type="Texture2D" uid="uid://bnkyhjdbu3ipm" path="res://assets/textures/ui/urizen_onebit_tileset__v1d0.png" id="1_du3jf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqku7"]
+resource_local_to_scene = true
+atlas = ExtResource("1_du3jf")
+region = Rect2(963, 287, 12, 12)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(28, 28)
+tooltip_text = "Draft"
+focus_mode = 0
+mouse_filter = 1
+toggle_mode = true
+icon = SubResource("AtlasTexture_lqku7")
+expand_icon = true

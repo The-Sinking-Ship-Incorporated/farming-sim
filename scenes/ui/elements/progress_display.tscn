@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://s6xn6larby3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxq71"]
+bg_color = Color(0.6, 1, 0.431373, 1)
+
+[node name="HBoxContainer" type="HBoxContainer"]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_styles/fill = SubResource("StyleBoxFlat_xxq71")
+show_percentage = false

@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://lqqcld3d7rt1"]
+
+[ext_resource type="Script" path="res://scripts/data/models/food.gd" id="1_tfnyy"]
+[ext_resource type="Texture2D" uid="uid://dpyfn8bea0i0" path="res://assets/textures/world/tiles/!CL_DEMO_32x32.png" id="1_tpg3t"]
+[ext_resource type="PackedScene" uid="uid://domm2hjptsk3d" path="res://scenes/world/selection_area.tscn" id="3_1r276"]
+[ext_resource type="PackedScene" uid="uid://cy2yw0p35gx1e" path="res://scenes/world/obj_label.tscn" id="4_q8dda"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f62b2"]
+atlas = ExtResource("1_tpg3t")
+region = Rect2(1248, 288, 32, 64)
+
+[node name="Anchor" type="Node2D"]
+editor_description = "this is here so we can scale the sprite independetly without also escaling the Area2D, this allow to use assets with different resolutions"
+script = ExtResource("1_tfnyy")
+nutrition = 0.5
+foodType = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = SubResource("AtlasTexture_f62b2")
+offset = Vector2(0, -10)
+
+[node name="SelectionArea" parent="." instance=ExtResource("3_1r276")]
+
+[node name="Anchor" parent="." instance=ExtResource("4_q8dda")]
