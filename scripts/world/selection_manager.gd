@@ -68,6 +68,23 @@ func _ready() -> void:
 	area_2d.area_exited.connect(OnAreaExited)
 
 
+func DecreasePriority():# SelectPreviousPriority, DecreasePriorityAndSelectCategory, FindAndSelectPreviousCategory
+	var prevPriorities = range(currPriority - 1, -1, -1)
+	print("prevPriorities: ", prevPriorities)
+	
+	for i in prevPriorities:
+		currPriority = i
+		print("priority decresed to ", currPriority)
+
+		var category = categoryPriority[i]
+		var isCategoryEmpty = overlapingAreas[category].is_empty()
+		if not isCategoryEmpty:
+			for a in overlapingAreas[category]:
+				SelectArea(a)
+				
+			break			
+		
+
 func SelectArea(area: Area2D):
 	area.Select()
 	currSelection.append(area)
@@ -80,6 +97,9 @@ func DeselectArea(area: Area2D):
 	currSelection.erase(area)
 	print("area deselected: ", area)
 	AreaDeselected.emit(area)
+	
+	if currSelection.is_empty():
+		DecreasePriority()
 		
 		
 func ClearCurrSelection():
@@ -126,18 +146,10 @@ func UpdateDrag():# UpdateSelectionRect()
 	selection_rect.custom_minimum_size = areaSize
 	collision_shape_2d.shape.size = areaSize
 	position = dragStartPos + dragCurrentPos / 2
-		
-	
-func OnMouseModeChanged(mouseMode: int):
-	# if TileMap.MouseModes.SELECT
-	if mouseMode == 0:
-		canDrag = true
-	else:
-		canDrag = false
 
 
 # add objects to respective selection category
-func OnAreaEntered(area: Area2D):
+func AddEntry(area: Area2D):
 	var object: Node2D = area.get_parent()
 	var objCategory: StringName = object.get_script().get_global_name()
 	var objPriority: int = categoryPriority.find(objCategory)
@@ -159,65 +171,59 @@ func OnAreaEntered(area: Area2D):
 			FirstObjSelected.emit()
 			
 		SelectArea(area)
-		
-		
 	
 	
-# remove objects from respective selection category
-func OnAreaExited(area: Area2D):
+# remove object from respective selection category
+func RemoveEntry(area: Area2D):
 	var object: Node2D = area.get_parent()
 	var objCategory: StringName = object.get_script().get_global_name()
-	var objPriority: int = categoryPriority.find(objCategory)
 	
 	overlapingAreas[objCategory].erase(area)
 	print("area exited: ", area)
-	
+	# NOTE why is this here? so don't deselect upon release?
+	#	if something enter doesn't that imply we dragging already?
+	#	why else would we be registring areas?
 	if isDragging:
-		print("selection logic start")
-		# while this works it's could be made more safe, clear and intentional
+		# NOTE letting areas get deselect on rect resize vs calling clearcurrselection
 		# 	we don't know winch order objs exit, while not visible it might be 
-		#	lowering priority and selecting 
-		# shouldn't areas be exited upon release?
-		if objPriority == currPriority: 
+		#	lowering priority and selecting previous priority 
+		#	if it does it will show up on output
+		if currSelection.has(area):			
 			DeselectArea(area)
-			
-			if currSelection.is_empty():
-				var prevPriorities = range(currPriority - 1, -1, -1)
-				print("prevPriorities: ", prevPriorities)
-				
-				for i in prevPriorities:
-					currPriority = i
-					print("priority decresed to ", currPriority)
 
-					var category = categoryPriority[i]
-					var isCategoryEmpty = overlapingAreas[category].is_empty()
-					if not isCategoryEmpty:
-						for a in overlapingAreas[category]:
-							SelectArea(a)
-							
-						break
-				
-				
-						
+
+	
+			
+	
+func OnMouseModeChanged(mouseMode: int):
+	# if TileMap.MouseModes.SELECT
+	if mouseMode == 0:
+		canDrag = true
+	else:
+		canDrag = false
+
+
+func OnAreaEntered(area: Area2D):
+	AddEntry(area)	
 	
 	
+func OnAreaExited(area: Area2D):
+	RemoveEntry(area)	
+			
+
 func OnObjClicked(obj):
 	pass
-	# deselect current selection
-	# updated selection
+	# TODO clear current selection and select object
+	
+	
 func OnObjDoubleClicked(obj):
-	# if double click select visible of same type, if single select obj
 	pass
+	# TODO clear current selection and select visible objs of same type
 
 
-func OnSelectionButtonRemoved(objects: Array):
+func OnSelectionEntryRemoved(objects: Array):
 	var areas = []
 	for o in objects:
 		areas.append(o.get_node("SelectionArea"))
-	for o in areas:
-		DeselectArea(o)
-		
-		print(objects.size())
-		print("children: ", o.get_children())
-
-		
+	for a in areas:
+		DeselectArea(a)

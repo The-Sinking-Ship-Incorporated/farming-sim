@@ -43,6 +43,14 @@ func CreateItemButton(entryName: String) -> Button:
 	
 	return button
 	
+	
+func RemoveEntry(entryName: String):
+	var entryButton = itemEntries[entryName]["button"]
+	entryButton.queue_free()
+	var entryObjs = itemEntries[entryName]["objects"]
+	owner.SelectionEntryRemoved.emit(entryObjs)
+	itemEntries.erase(entryName)
+
 
 func UpdateItemButtonText(entryName: String):
 	var itemEntry = itemEntries[entryName]
@@ -118,9 +126,14 @@ func OnAreaSelected(area: Area2D):
 				
 	print(itemEntries)
 	
+# NOTE is entryName better than objName?
 func OnAreaDeselected(area: Area2D):
 	var obj = area.get_parent()
 	var objName = obj.objName
+	
+	# in case entry was removed by ButtonClicked functions
+	if not itemEntries.has(objName):
+		return	
 	
 	# decrement or remove item button
 	var itemEntry = itemEntries[objName]
@@ -146,6 +159,7 @@ func OnAreaDeselected(area: Area2D):
 
 	print(itemEntries)
 	
+	
 func OnButtonLeftClicked(entryName: String):
 	pass	
 	#TODO display data on obj info category 
@@ -154,15 +168,14 @@ func OnButtonLeftClicked(entryName: String):
 func OnButtonDoubleLeftClicked(entryName: String):
 	for e in itemEntries:
 		if not e == entryName:
-			var entryObjs = itemEntries[entryName]["objects"]
-			owner.SelectionButtonRemoved.emit(entryObjs)
+			RemoveEntry(entryName)
+	#TODO select clicked button
 	
 	
 func OnButtonRightClicked(entryName: String):
-	var entryObjs = itemEntries[entryName]["objects"]
-	owner.SelectionButtonRemoved.emit(entryObjs)
+	RemoveEntry(entryName)
 	
-	#TODO select button idx 0
+	#TODO select button idx 0 if currently selected item was the one removed
 	
 	
 func OnActionButtonPressed(taskType: Task.TaskType):

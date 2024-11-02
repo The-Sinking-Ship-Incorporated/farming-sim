@@ -39,7 +39,7 @@ signal CategoryButtonPressed(menuIndex: int, buttonIndex: int)
 signal ActionButtonPressed(taskType: Task.TaskType)
 
 signal SelectionButtonSelected(worldObjects: Array)
-signal SelectionButtonRemoved(worldObjects: Array)
+signal SelectionEntryRemoved(worldObjects: Array)
 #endregion
 
 enum VisibilityModes {VISIBLE, COUNTDOWN, HIDDEN}

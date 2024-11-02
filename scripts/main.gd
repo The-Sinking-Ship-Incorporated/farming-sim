@@ -23,5 +23,5 @@ func ConnectSignals():
 	selectionManager.AreaSelected.connect(selectionMenu.OnAreaSelected)
 	selectionManager.AreaDeselected.connect(selectionMenu.OnAreaDeselected)
 	
-	menuBar.SelectionButtonRemoved.connect(selectionManager.OnSelectionButtonRemoved)
+	menuBar.SelectionEntryRemoved.connect(selectionManager.OnSelectionEntryRemoved)
 	menuBar.ActionButtonPressed.connect(taskManager.OnActionButtonPressed)
