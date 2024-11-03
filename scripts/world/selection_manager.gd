@@ -68,7 +68,7 @@ func _ready() -> void:
 	area_2d.area_exited.connect(OnAreaExited)
 
 
-func DecreasePriority():# SelectPreviousPriority, DecreasePriorityAndSelectCategory, FindAndSelectPreviousCategory
+func SelectPreviousCategory():#GetPreviousNonEmptyCategory
 	var prevPriorities = range(currPriority - 1, -1, -1)
 	print("prevPriorities: ", prevPriorities)
 	
@@ -83,7 +83,10 @@ func DecreasePriority():# SelectPreviousPriority, DecreasePriorityAndSelectCateg
 				SelectArea(a)
 				
 			break			
-		
+			
+	if currSelection.is_empty():
+		LastObjDeselected.emit()
+	
 
 func SelectArea(area: Area2D):
 	area.Select()
@@ -99,7 +102,7 @@ func DeselectArea(area: Area2D):
 	AreaDeselected.emit(area)
 	
 	if currSelection.is_empty():
-		DecreasePriority()
+		SelectPreviousCategory()
 		
 		
 func ClearCurrSelection():

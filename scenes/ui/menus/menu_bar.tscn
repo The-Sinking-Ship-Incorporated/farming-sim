@@ -130,157 +130,157 @@ region = Rect2(1301, 599, 12, 12)
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1015, 495, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0d30"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4mel"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(885, 378, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xcwvj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f83al"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(755, 352, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nyt7e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dx11"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(66, 482, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_joun5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nofm"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(794, 326, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sa00n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r80gh"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(547, 430, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0mxy6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qtcy"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(716, 66, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lgmsk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccx7n"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(53, 404, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_quoq7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqvwk"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(794, 326, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wfv3r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki0qp"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1119, 495, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ee8pj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_osja6"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1132, 495, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r7ta7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmw3v"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(14, 404, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ujd8o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u4l5"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(378, 365, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ry30d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o5uv"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(79, 404, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3of4a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewq7b"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(430, 378, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lk4k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhbo3"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(183, 404, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_voah8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pwte"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(105, 404, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rbjqr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho4e8"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1028, 1, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kxpw5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyan3"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1041, 1, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7653t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t1bn"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1, 40, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmplb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_503dw"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(677, 1, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f3mvo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvc5h"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1, 547, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qk2ca"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp20a"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(742, 261, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6vg67"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeecg"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(729, 261, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmdks"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfkyg"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1, 469, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_52ynk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy6fp"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(170, 469, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_15kqt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkn0s"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(339, 287, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2ec8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjlal"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(365, 456, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ul8u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wgs5"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(391, 456, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eppn0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wr14"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(1249, 326, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3in4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l70o0"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(183, 300, 12, 12)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8jrr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aguku"]
 resource_local_to_scene = true
 atlas = ExtResource("5_m7ow4")
 region = Rect2(105, 612, 12, 12)
@@ -603,35 +603,35 @@ size_flags_horizontal = 3
 theme_type_variation = &"TitleButton"
 disabled = true
 text = "Selection"
-icon = SubResource("AtlasTexture_x0d30")
+icon = SubResource("AtlasTexture_h4mel")
 
 [node name="ArchitectMenuButton" parent="HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("11_1vvhj")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"TitleButton"
 text = "Architect"
-icon = SubResource("AtlasTexture_xcwvj")
+icon = SubResource("AtlasTexture_f83al")
 
 [node name="ManageMenuButton" parent="HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("11_1vvhj")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"TitleButton"
 text = "Manage"
-icon = SubResource("AtlasTexture_nyt7e")
+icon = SubResource("AtlasTexture_7dx11")
 
 [node name="SettingsMenuButton" parent="HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("11_1vvhj")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"TitleButton"
 text = "Settings"
-icon = SubResource("AtlasTexture_joun5")
+icon = SubResource("AtlasTexture_2nofm")
 
 [node name="DevMenuButton" parent="HBoxContainer/VBoxContainer/MenuButtons/MenuButtonContainer" instance=ExtResource("11_1vvhj")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"TitleButton"
 text = "Debug"
-icon = SubResource("AtlasTexture_sa00n")
+icon = SubResource("AtlasTexture_r80gh")
 
 [node name="MenuViewport" type="Panel" parent="HBoxContainer/VBoxContainer"]
 clip_contents = true
@@ -705,59 +705,59 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton14" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_0mxy6")
+icon = SubResource("AtlasTexture_2qtcy")
 category = 1
 
 [node name="TileButton15" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
 tooltip_text = "Disassemble/Deconstruct"
-icon = SubResource("AtlasTexture_lgmsk")
+icon = SubResource("AtlasTexture_ccx7n")
 category = 1
 
 [node name="TileButton17" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
 tooltip_text = "Uninstall"
-icon = SubResource("AtlasTexture_quoq7")
+icon = SubResource("AtlasTexture_cqvwk")
 category = 1
 
 [node name="TileButton21" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_wfv3r")
+icon = SubResource("AtlasTexture_ki0qp")
 category = 1
 
 [node name="TileButton16" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_ee8pj")
+icon = SubResource("AtlasTexture_osja6")
 category = 1
 
 [node name="TileButton" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_r7ta7")
+icon = SubResource("AtlasTexture_nmw3v")
 category = 1
 
 [node name="TileButton2" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_ujd8o")
+icon = SubResource("AtlasTexture_0u4l5")
 category = 1
 
 [node name="TileButton3" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_ry30d")
+icon = SubResource("AtlasTexture_4o5uv")
 category = 1
 
 [node name="TileButton19" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_3of4a")
+icon = SubResource("AtlasTexture_ewq7b")
 category = 1
 
 [node name="TileButton18" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_4lk4k")
+icon = SubResource("AtlasTexture_lhbo3")
 category = 1
 
 [node name="TileButton4" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_voah8")
+icon = SubResource("AtlasTexture_5pwte")
 category = 1
 
 [node name="MenuCategoryViewport2" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -778,12 +778,12 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton9" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport2/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_rbjqr")
+icon = SubResource("AtlasTexture_ho4e8")
 category = 6
 
 [node name="TileButton10" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport2/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_kxpw5")
+icon = SubResource("AtlasTexture_pyan3")
 category = 6
 
 [node name="MenuCategoryViewport3" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -804,17 +804,17 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton5" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_7653t")
+icon = SubResource("AtlasTexture_3t1bn")
 category = 3
 
 [node name="TileButton6" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_nmplb")
+icon = SubResource("AtlasTexture_503dw")
 category = 3
 
 [node name="TileButton13" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport3/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_f3mvo")
+icon = SubResource("AtlasTexture_lvc5h")
 category = 3
 
 [node name="MenuCategoryViewport4" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -835,12 +835,12 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton7" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_qk2ca")
+icon = SubResource("AtlasTexture_pp20a")
 category = 5
 
 [node name="TileButton8" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport4/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_6vg67")
+icon = SubResource("AtlasTexture_oeecg")
 category = 5
 
 [node name="MenuCategoryViewport5" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -861,12 +861,12 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton9" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport5/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_bmdks")
+icon = SubResource("AtlasTexture_jfkyg")
 category = 6
 
 [node name="TileButton10" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport5/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_52ynk")
+icon = SubResource("AtlasTexture_sy6fp")
 category = 6
 
 [node name="MenuCategoryViewport6" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -887,17 +887,17 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton9" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_15kqt")
+icon = SubResource("AtlasTexture_vkn0s")
 category = 6
 
 [node name="TileButton11" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_v2ec8")
+icon = SubResource("AtlasTexture_sjlal")
 category = 6
 
 [node name="TileButton10" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport6/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_4ul8u")
+icon = SubResource("AtlasTexture_8wgs5")
 category = 6
 
 [node name="MenuCategoryViewport7" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -918,7 +918,7 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton9" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport7/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_eppn0")
+icon = SubResource("AtlasTexture_4wr14")
 category = 6
 
 [node name="MenuCategoryViewport8" type="ScrollContainer" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
@@ -939,12 +939,12 @@ script = ExtResource("15_3jgmt")
 
 [node name="TileButton11" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport8/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_y3in4")
+icon = SubResource("AtlasTexture_l70o0")
 category = 9
 
 [node name="TileButton12" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer/MenuCategoryViewport8/TileContainer" instance=ExtResource("16_bh8bg")]
 layout_mode = 2
-icon = SubResource("AtlasTexture_w8jrr")
+icon = SubResource("AtlasTexture_aguku")
 category = 9
 
 [node name="SearchBar" type="LineEdit" parent="HBoxContainer/VBoxContainer/MenuViewport/VBoxContainer/MenuContainer/ArchitectMenuViewport/MenuCategoryContainer"]
