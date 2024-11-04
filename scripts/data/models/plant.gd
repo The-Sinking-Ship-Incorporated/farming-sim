@@ -8,6 +8,8 @@ var harvestDifficulty: float = 4
 var harvestItem: String = "res://scenes/world/items/berries.tscn"
 var harvestAmount: Vector2i = Vector2i(5, 15)
 
+@onready var tile_map: Node2D = $"../../TileMap"
+
 
 func _init():
 	super._init()
@@ -25,7 +27,7 @@ func TryHarvest(amount: float) -> bool:
 	if harvestProgress >= 1:
 		itemManager.RemoveItemFromWorld(self)
 		var rng = RandomNumberGenerator.new()
-		itemManager.SpawnItemByName(harvestItem, randi_range(harvestAmount.x, harvestAmount.y), itemManager.WorldToMapPosition(position))
+		itemManager.SpawnItemByName(harvestItem, randi_range(harvestAmount.x, harvestAmount.y), tile_map.WorldToMapPos(position))
 		return true
 	else:
 		return false
