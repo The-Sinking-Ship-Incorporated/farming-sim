@@ -12,6 +12,5 @@ custom_minimum_size = Vector2(28, 28)
 tooltip_text = "Harvest"
 focus_mode = 0
 mouse_filter = 1
-toggle_mode = true
 icon = SubResource("AtlasTexture_m7siw")
 expand_icon = true

@@ -3,6 +3,8 @@ class_name TaskManager
 
 var taskQueue = []
 
+@onready var selection_manager: Control = $"../../WorldUI/SelectionManager"
+
 	
 func AddTask(taskType, targetItem):
 	var newTask = Task.new()
@@ -29,6 +31,15 @@ func RequestFindAndEatFoodTask():
 	return task
 
 
+func RunActionOnSelectedObjs(taskType: Task.TaskType):
+	var selectedObjs = []
+	for a in selection_manager.currSelection:
+		selectedObjs.append(a.get_parent())
+	for o in selectedObjs:
+		AddTask(taskType, o)
+
+
 func OnActionButtonPressed(taskType: Task.TaskType):
-	# TODO request task for every obj in selection
-	pass
+	RunActionOnSelectedObjs(taskType)
+		
+		
