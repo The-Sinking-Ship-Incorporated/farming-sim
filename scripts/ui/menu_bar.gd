@@ -16,23 +16,6 @@ class_name NavigationBar
 #		- cat-cont sig to option-cont func 
 #		- menu-cont sig to option-cont func 
 
-# NOTE 
-#	consider using flow container
-# 	think interface
-#	- different Menus might have different node structure/tree/button arrangement,
-#		but as long as it emit the signal, parent will know where to find what i needs 
-#		specific/specialized code goes into child, more generic goes into parent
-# - serviceable ui repo, link in ui epsode
-# having menus and swaps as screen fading in and out might been easier and look better looking
-# and if triggered simultaneously would also have same effect
-
-# TODO
-# - tween resource so can share same tween values rather than making a sync function 
-# - hardwire signal connection between cat containers to respective menus
-
-# BUG 
-# can click button while closing, causing it to open again whilst faded
-
 #region Signals
 signal MenuButtonPressed(buttonIndex: int)
 signal CategoryButtonPressed(menuIndex: int, buttonIndex: int)
@@ -119,7 +102,6 @@ func FadeOut():
 	tween.tween_property(self, "modulate", Color.WHITE / 2, menuFadeOutDuration)
 	
 
-# NOTE use control with fixe size as returning point?
 func OpenTray():
 	var height = get_viewport_rect().size.y
 	var targetPos = Vector2(position.x, height - size.y)
@@ -167,20 +149,19 @@ func OnMouseExited():
 		MouseModes.SELECT:
 			if visibilityMode == VisibilityModes.HIDDEN:
 				FadeOut()
-			# NOTE use tween timer instead so dont need process?
+
 			elif visibilityMode == VisibilityModes.VISIBLE:
 				visibilityTimer = trayCloseTime
 				visibilityMode = VisibilityModes.COUNTDOWN	
 	
-# TODO call to swap category and swap menu
+
 func OnMenuButtonPressed(_buttonIndex: int):
 	#if mouseMode == MouseModes.PLACE:
-		#pass #TODO if button not idx-0: clear tile/mode = select
+		#pass 
 	OpenTray()	
 	
 
 func OnTileButtonPressed():
-	# TODO set mouse mode to place and disable menu buttons
 	CloseTray()
 
 

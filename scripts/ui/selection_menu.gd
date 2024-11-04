@@ -1,13 +1,9 @@
 @icon("res://resource/atlas_texture/rpgicon.tres")
-extends Control #TODO or Menu?
+extends Control 
 
 
 const LIST_ITEM_BUTTON = preload("res://scenes/ui/elements/selection_item_button.tscn")
 
-# NOTE this and and @export task.tasktype enum could be in an action button script
-#	have the action button init/generation code inside button script
-#	like having textures map, so know what icon to use, would remove need for 
-#	individual button resources, simply set task type and it handle the rest  
 const TASK_BUTTON_MAP = {
 	Task.TaskType.HARVEST: "res://scenes/ui/elements/action_buttons/action_button_harvest.tscn",
 	Task.TaskType.DRAFT: "res://scenes/ui/elements/action_buttons/action_button_draft.tscn",
@@ -126,7 +122,7 @@ func OnAreaSelected(area: Area2D):
 				
 	print(itemEntries)
 	
-# NOTE is entryName better than objName?
+
 func OnAreaDeselected(area: Area2D):
 	var obj = area.get_parent()
 	var objName = obj.objName
@@ -162,20 +158,16 @@ func OnAreaDeselected(area: Area2D):
 	
 func OnButtonLeftClicked(entryName: String):
 	pass	
-	#TODO display data on obj info category 
 	
 
 func OnButtonDoubleLeftClicked(entryName: String):
 	for e in itemEntries:
 		if not e == entryName:
 			RemoveEntry(entryName)
-	#TODO select clicked button
-	
+
 	
 func OnButtonRightClicked(entryName: String):
 	RemoveEntry(entryName)
-	
-	#TODO select button idx 0 if currently selected item was the one removed
 	
 	
 func OnActionButtonPressed(taskType: Task.TaskType):

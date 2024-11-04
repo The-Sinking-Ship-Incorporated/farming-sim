@@ -1,32 +1,12 @@
 extends Control
 
-# if something was selected/in area, open tray
-# on release and empty: close tray, disable selection menu btn
-
-#	selection manager emit signal if selection is empty or has something 
-# NOTE we might not need this since buttons are updated in real time, just make
-#	sure upon release, all items get deselected
-#func OnSelectionFinished():
-	# selection menu  has to react to this to clear list and actions
-	#		or don't since menu willbe disabled anyway, so we care only about
-	#		the selection start signal, only then we clear list and show 
-	
-
-## NOTE passing an typed array, such as Array[Item], Array[Pawn] and match the
-##  array type seems more clean way of infering what type/cat we dealing with,
-##  every time an obj that does not match the Array type
-##	/category change, objs in the array get deselected and Array with new type 
-##	is created to hold new selection, but we not passing arrays anymore
 
 #signal SelectionStarted
 signal FirstObjSelected
 signal LastObjDeselected
 signal AreaSelected(area: Area2D)
 signal AreaDeselected(area: Area2D)
-# NOTE selectiong category changed signal?
 
-# NOTE make dict instead? plant = 0, so can get value directly, no converting
-#	 back and forth between priority index and category name
 var categoryPriority = ["Plant", "Animal", "Item", "Pawn"] 
 var currPriority = 0
 
@@ -41,7 +21,6 @@ var currSelection: Array[Area2D] = []
 var tileSize: Vector2i
 
 var canDrag: bool = true
-# NOTE do we need this? if area entered/exited we must be dragging/selection rect enabled anyway
 var isDragging: bool = false
 var dragStartPos: Vector2
 
@@ -111,7 +90,6 @@ func ClearCurrSelection():
 		a.Deselect()
 		AreaDeselected.emit(a)
 		
-	# NOTE use pop_front instead?
 	currSelection.clear()
 	print("clear after: ", currSelection)
 
@@ -122,7 +100,7 @@ func StartDrag():#StartSelection
 	dragStartPos = get_global_mouse_position()
 	isDragging = true
 	#area_2d.monitoring = true
-	# NOTE why is this here?
+	
 	UpdateDrag()
 	show()
 	
@@ -132,16 +110,10 @@ func StartDrag():#StartSelection
 func StopDrag():#StopSelection
 	isDragging = false
 	#area_2d.monitoring = false
-	# NOTE why is this here?
 	hide()
 	
 
 func UpdateDrag():# UpdateSelectionRect()
-	# NOTE could use fmod/mod instead?
-	# NOTE we only need to match the tile map grid when placing, not when selecting
-	# 	well, the idea was to on click we select with an area of a single tile
-	#	because there was no drag, but we don't have tile data and occupiers here
-	#	so we better off with sprite selection for now
 	#var gridStartPos: Vector2i = dragStartPos.floor() / tileSize.x
 	#var gridEndPos: Vector2i = get_global_mouse_position().floor() / tileSize.x
 	var dragCurrentPos = get_global_mouse_position() - dragStartPos
@@ -149,6 +121,9 @@ func UpdateDrag():# UpdateSelectionRect()
 	selection_rect.custom_minimum_size = areaSize
 	collision_shape_2d.shape.size = areaSize
 	position = dragStartPos + dragCurrentPos / 2
+
+
+#func OnSelectionFinished():
 
 
 # add objects to respective selection category
@@ -164,13 +139,9 @@ func AddEntry(area: Area2D):
 		currPriority = objPriority
 		print("priority increased to ", currPriority)
 		ClearCurrSelection()
-				
-	
+					
 	if objPriority == currPriority:
 		if currSelection.is_empty():
-			# TODO we emiting this everytime priority increase
-			# if priority = 0 and selection.is_empty() might be better
-			# to check if entries are empty, still not ideal
 			FirstObjSelected.emit()
 			
 		SelectArea(area)
@@ -183,19 +154,10 @@ func RemoveEntry(area: Area2D):
 	
 	overlapingAreas[objCategory].erase(area)
 	print("area exited: ", area)
-	# NOTE why is this here? so don't deselect upon release?
-	#	if something enter doesn't that imply we dragging already?
-	#	why else would we be registring areas?
+	 
 	if isDragging:
-		# NOTE letting areas get deselect on rect resize vs calling clearcurrselection
-		# 	we don't know winch order objs exit, while not visible it might be 
-		#	lowering priority and selecting previous priority 
-		#	if it does it will show up on output
 		if currSelection.has(area):			
 			DeselectArea(area)
-
-
-	
 			
 	
 func OnMouseModeChanged(mouseMode: int):
@@ -216,12 +178,10 @@ func OnAreaExited(area: Area2D):
 
 func OnObjClicked(obj):
 	pass
-	# TODO clear current selection and select object
 	
 	
 func OnObjDoubleClicked(obj):
 	pass
-	# TODO clear current selection and select visible objs of same type
 
 
 func OnSelectionEntryRemoved(objects: Array):

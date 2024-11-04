@@ -1,10 +1,5 @@
 extends Node
 
-# WARNING pathfinding need terrain data to work with, must be after TileMap in
-#	tree order, or mess up the ready order
-#	is this as SMELL? relying on tree position
-#	consider using init
-
 
 @onready var tileMap = $"../TileMap"
 
@@ -36,7 +31,6 @@ func RequestPath(startMapPos : Vector2i, endMapPos : Vector2i):
 	
 	# offset path so walks through center of tile and not origin
 	for i in len(path):
-		# NOTE divided by float 2.0 rather than int 2, so we get 0.5 and not 0
 		path[i] += tileMap.tileSize / 2.0
 	
 	return path

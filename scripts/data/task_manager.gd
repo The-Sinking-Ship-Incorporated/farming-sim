@@ -13,7 +13,7 @@ func AddTask(taskType, targetItem):
 		newTask.InitHarvestPlantTask(targetItem)
 		taskQueue.append(newTask)
 
-# global work orders?
+
 func RequestTask():
 	if len(taskQueue) > 0:
 		

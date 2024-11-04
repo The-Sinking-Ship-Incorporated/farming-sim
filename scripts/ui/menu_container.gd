@@ -29,10 +29,9 @@ func OnMenuButtonPressed(buttonIndex: int):
 
 
 #func OnCategoryButtonPressed(menuIndex: int, buttonIndex: int):
-	## swap menu category
 	#var targetMenu = menu_container.get_child(menuIndex).get_child(0)
 	#var menuCategoryHeight = size.y
 	#var targetPos = Vector2(0, menuCategoryHeight * buttonIndex)
 	#var tween = create_tween().set_trans(categorySwapTrans).set_ease(categorySwapEase)
 	#tween.tween_property(targetMenu, "position", -targetPos, categorySwapDuration)
-	#
+	

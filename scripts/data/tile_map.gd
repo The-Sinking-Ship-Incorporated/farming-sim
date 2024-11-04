@@ -35,18 +35,12 @@ func _process(delta):
 		generateTerrain = false
 		GenerateTerrain()
 
-# NOTE don't need to be static since every item has access to item manager for some reason
+ 
 func WorldToMapPos(worldPos: Vector2) -> Vector2i:
-	# NOTE why there offset here? isn't pathfinding offseting result already?
 	var offset = tileSize / 2
-	# NOTE 	if a member of division is float result is float as well, when
-	#	getting mapPos need integer precision, so we cast into Vector2i, this 
-	#	is not needed when going MapToWorld as screen accepts half pixels
-	#	could also have used .floor()
 	return Vector2i(worldPos / tileSize.x)
 
 
-# NOTE use TileMapLayer's map_to_local() instead? result already come with offset?
 func MapToWorldPos(mapPos : Vector2i) -> Vector2:
 	var offset = tileSize / 2
 

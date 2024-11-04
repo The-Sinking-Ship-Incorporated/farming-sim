@@ -38,13 +38,6 @@ func _ready() -> void:
 	newPawn.position = Vector2(384, 384)
 	get_parent().add_child.call_deferred(newPawn)
 
-# SMELL would be better to use the Preloader or even a dictionary over this
-#	loader functions? this might automate adding new items but makes accessing 
-#	them harder, is Preloader superior?
-#	loader functions are doing what Preloader is meant to solve
-#	not that it isn't viable, compare advantages of each and remember that 
-#	Preloader is a singleton, and they are frowned upon for reasons
-# 	could name Preloader: Resources, Templates, or just separeate in categories
 
 #func LoadFood():
 	#var path = "res://scenes/world/items/"
@@ -72,8 +65,7 @@ func LoadItemPrototypes():
 	#itemsInWorld.append(newItem)
 	#add_child(newItem)
 	
-# NOTE have instance code inside respective class?
-# NOTE we not spawning by name, we spawning by path
+ 
 func SpawnItemByName(itemName : String, amount: int, mapPos : Vector2i):
 	var newItem
 	
@@ -100,12 +92,7 @@ func FindNearestItem(itemCategory : ItemCategory, worldPosition : Vector2):
 	var nearestItem = null
 	var nearestDistance = INF
 	
-	# SMELL why loop through itemInWorld if we using groups? why not get item in group?
-	#	faster than checking all world items, having array for each type was suggested
-	# 	working just as group
 	for item in itemsInWorld:	
-		#if item.get_script().get_global_name() == itemClass.get_global_name():
-		# get str from enum.keys to compare with item.get_class.global_name instead? or be more work? 
 		if IsItemInCategory(item, itemCategory):
 			var distance = worldPosition.distance_to(item.position)
 			

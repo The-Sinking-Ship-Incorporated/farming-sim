@@ -12,7 +12,6 @@ var zoom_target = zoom
 
 var last_drag_pos = Vector2.ZERO
 
-# NOTE consider making queue for zoom
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("scroll_up"):

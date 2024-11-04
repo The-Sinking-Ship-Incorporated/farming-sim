@@ -1,7 +1,7 @@
 extends Node
 class_name Task
 
-## NOTE draft is task since has to drop what is holding, stop moving, etc
+
 enum TaskType {BASE_TASK, FIND_ITEM, WALK_TO, PICKUP, EAT, MANIPULATE, HARVEST, HUNT, DRAFT}
 
 var taskName: String
@@ -48,10 +48,6 @@ func OnReachedDestination():
 #	as pawn moves check if has arrived at locations yet, if did, 
 #	picks up the task's target item 
 #	then consume said food item
-# later we'll have:
-#	find spot (stockpile/crafting table), move and drop
-#	find crafing spot and do work
-#	find pawn and interact 
 func InitFindAndEatFoodTask():
 	taskName = "Find and eat some food"
 	

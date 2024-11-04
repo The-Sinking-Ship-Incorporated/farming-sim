@@ -1,8 +1,9 @@
 extends Sprite2D
-# NOTE should handle clicks as well?
+
 
 signal Clicked
 signal DoubleClicked
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("left_click"):

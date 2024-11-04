@@ -84,9 +84,7 @@ func DoCurrentTask(delta):
 				else:
 					print("finished eating food")
 					inHand = null
-					# WARNING why there's two? also we deleted another similar
-					#	redundant thing, either in ep 5 or before,
-					#	could that cause problem?
+					 
 					currentTask.OnFinishSubTask()
 					OnFinishedSubTask()
 					

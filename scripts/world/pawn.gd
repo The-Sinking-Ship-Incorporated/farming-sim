@@ -5,14 +5,7 @@ class_name Pawn
 # - move follow path
 # - drawing sprite, path and selection
 # - handle mouse clicks
-
-# SMELL pawn can't be tested on it's own because has references to outside nodes
-#	like tile map and pathfinding, on other hand without those two pawn is just
-#	a sprite, has no other behavior
-#	pathfinding is a pawn exclusive behavior part of it's AI, could be merged
-#	on the other other hand, having pathfinding code separate make pawn code more
-#	clean, 	
-
+ 
 signal Clicked
 
 const SPEED = 50
@@ -77,15 +70,7 @@ func _ready() -> void:
 		
 	selection_sprite.Clicked.connect(OnSpriteClicked)	
 
-# BUG: when stoping walk animatin flicker
-#	might have to do with the final approach/stop detection as it sometimes
-#	will not stop at center, geting the dir to the final tile coord in path
-#	could be leaving weird dir now that pawn is on top of tile 
-#	- when start swing hit toward last directing was when entered tile, so
-#	blend pos seems to be right, but something is overiding when idle,
-#	could also be walk animation but look like idle when not moving
-#	do we need to stop animation before moving to next one?
-# 	could have something to do with time, swaping texture, idle vs physics
+
 func _physics_process(delta):
 	match state:
 		"Idle":

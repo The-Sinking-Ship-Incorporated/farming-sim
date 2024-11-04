@@ -4,7 +4,6 @@ class_name Plant
 var harvestProgress: float = 0
 var harvestDifficulty: float = 4
 
-# SMELL could we not use preloader constant here instead?
 var harvestItem: String = "res://scenes/world/items/berries.tscn"
 var harvestAmount: Vector2i = Vector2i(5, 15)
 
@@ -32,6 +31,6 @@ func TryHarvest(amount: float) -> bool:
 	else:
 		return false
 		
-# NOTE selection action button should handle this		
+
 func OnClick():
 	taskManager.AddTask(Task.TaskType.HARVEST, self)
