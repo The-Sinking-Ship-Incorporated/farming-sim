@@ -31,15 +31,12 @@ func RequestFindAndEatFoodTask():
 	return task
 
 
-func RunActionOnSelectedObjs(taskType: Task.TaskType):
-	var selectedObjs = []
-	for a in selection_manager.currSelection:
-		selectedObjs.append(a.get_parent())
-	for o in selectedObjs:
+func CreateTaskForEachObj(taskType: Task.TaskType, objects: Array):# RunActionOnObjects
+	for o in objects:
 		AddTask(taskType, o)
 
 
-func OnActionButtonPressed(taskType: Task.TaskType):
-	RunActionOnSelectedObjs(taskType)
+func OnActionButtonPressed(taskType: Task.TaskType, objects: Array):
+	CreateTaskForEachObj(taskType, objects)
 		
 		

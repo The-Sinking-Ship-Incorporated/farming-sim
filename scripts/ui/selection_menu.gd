@@ -116,9 +116,9 @@ func OnAreaSelected(area: Area2D):
 	var objActions = obj.actions
 	for a in objActions:
 		if actionEntries.has(a):
-			actionEntries[a]["refcount"] += 1 
+			actionEntries[a]["objects"].append(obj)
 		else:
-			actionEntries[a] = {"button" = CreateActionButton(a), "refcount" = 1}
+			actionEntries[a] = {"button" = CreateActionButton(a), "objects" = [obj]}
 				
 	print(itemEntries)
 	
@@ -147,8 +147,8 @@ func OnAreaDeselected(area: Area2D):
 	# decrement or remove action button
 	var objActions = obj.actions
 	for a in objActions:
-		actionEntries[a]["refcount"] -= 1 
-		if actionEntries[a]["refcount"] == 0:
+		actionEntries[a]["objects"].erase(obj) 
+		if actionEntries[a]["objects"].size() == 0:
 			var actionButton = actionEntries[a]["button"]	
 			actionButton.queue_free()
 			actionEntries.erase(a)
@@ -171,7 +171,7 @@ func OnButtonRightClicked(entryName: String):
 	
 	
 func OnActionButtonPressed(taskType: Task.TaskType):
-	owner.ActionButtonPressed.emit(taskType)
+	owner.ActionButtonPressed.emit(taskType, actionEntries[taskType])
 
 
 

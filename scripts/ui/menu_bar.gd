@@ -19,7 +19,7 @@ class_name NavigationBar
 #region Signals
 signal MenuButtonPressed(buttonIndex: int)
 signal CategoryButtonPressed(menuIndex: int, buttonIndex: int)
-signal ActionButtonPressed(taskType: Task.TaskType)
+signal ActionButtonPressed(taskType: Task.TaskType, objects: Array)
 
 signal SelectionButtonSelected(worldObjects: Array)
 signal SelectionEntryRemoved(worldObjects: Array)
